@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(252, 215, 221);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgb(211, 138, 162);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #740c4f;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: rgb(107, 7, 85);
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            background-color: #5f194e;
+            color: #fcf9f9;
+            font-weight: bold;
+            font-size: large;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #9e4187;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <form action="calculate.php" method="post">
+            <label for="num1">Enter Number 1:</label>
+            <input type="number" name="num1" required>
+
+            <label for="num2">Enter Number 2:</label>
+            <input type="number" name="num2" required>
+
+            <label for="operation">Select Operation:</label>
+            <select name="operation" required>
+                <option value="Addition">Addition</option>
+                <option value="Subtraction">Subtraction</option>
+                <option value="Multiply">Multiplication</option>
+                <option value="Divide">Division</option>
+                <option value="Modulus">Modulus</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
